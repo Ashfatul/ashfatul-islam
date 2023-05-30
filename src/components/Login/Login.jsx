@@ -17,7 +17,7 @@ export default function Login() {
             onSubmit={handleSubmit(UpdateProfile)}
             className="bg-slate-300 rounded-lg p-5"
          >
-            <h2 className="text-2xl text-center mb-5">Welcome Back!</h2>
+            <h2 className="text-2xl text-center mb-5">Welcome Back!!</h2>
             <div className="form-control">
                <label>Email</label>
                <input
