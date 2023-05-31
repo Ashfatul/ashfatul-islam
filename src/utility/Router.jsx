@@ -6,6 +6,7 @@ import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 import Login from "../components/Login/Login";
 import LoggedInRedirect from "../Redirect/LoggedInRedirect";
 import NotLoggedInRedirect from "../Redirect/NotLoggedInRedirect";
+import Dashboard from "../components/Dashboard/Dashboard";
 
 const router = createBrowserRouter([
    {
@@ -25,7 +26,11 @@ const router = createBrowserRouter([
       children: [
          {
             path: "/root",
-            element: <NotLoggedInRedirect>ok</NotLoggedInRedirect>,
+            element: (
+               <NotLoggedInRedirect>
+                  <Dashboard />
+               </NotLoggedInRedirect>
+            ),
          },
          {
             path: "/root/update-profile",

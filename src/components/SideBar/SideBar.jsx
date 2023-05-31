@@ -6,10 +6,14 @@ export default function SideBar() {
          <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
          <ul className="menu p-4 w-80 bg-base-100 text-base-content">
             <li>
-               <NavLink to="update-profile">Update Profile</NavLink>
+               <NavLink to="/root" end>
+                  Dashboard
+               </NavLink>
             </li>
             <li>
-               <a>Sidebar Item 2</a>
+               <NavLink to="update-profile" end>
+                  Backend Profile
+               </NavLink>
             </li>
          </ul>
       </div>

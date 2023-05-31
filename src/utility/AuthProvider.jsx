@@ -4,7 +4,7 @@ import {
    onAuthStateChanged,
    signInWithEmailAndPassword,
    signOut,
-   //    updateProfile,
+   updateProfile,
 } from "firebase/auth";
 import app from "./firebase";
 import { useEffect } from "react";
@@ -41,6 +41,22 @@ const AuthProvider = ({ children }) => {
       return signOut(auth);
    };
 
+   const profileUpdate = (data) => {
+      if (user) {
+         updateProfile(user, {
+            displayName: data.displayName,
+            photoURL: data.photoURL,
+         })
+            .then(() => {
+               toastr.success("Profile updated");
+               return "success";
+            })
+            .catch((error) => {
+               toastr.error(error.message);
+            });
+      }
+   };
+
    useEffect(() => {
       const unsubscribe = onAuthStateChanged(auth, (loggedUser) => {
          setUser(loggedUser);
@@ -57,6 +73,7 @@ const AuthProvider = ({ children }) => {
       loading,
       signIn,
       logOut,
+      profileUpdate,
    };
 
    return (
