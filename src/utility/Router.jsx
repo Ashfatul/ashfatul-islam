@@ -4,6 +4,8 @@ import BackEndLayout from "../layout/BackEndLayout";
 import AuthLayout from "../layout/AuthLayout";
 import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 import Login from "../components/Login/Login";
+import LoggedInRedirect from "../Redirect/LoggedInRedirect";
+import NotLoggedInRedirect from "../Redirect/NotLoggedInRedirect";
 
 const router = createBrowserRouter([
    {
@@ -23,11 +25,15 @@ const router = createBrowserRouter([
       children: [
          {
             path: "/root",
-            element: "Back End",
+            element: <NotLoggedInRedirect>ok</NotLoggedInRedirect>,
          },
          {
             path: "/root/update-profile",
-            element: <UpdateProfile />,
+            element: (
+               <NotLoggedInRedirect>
+                  <UpdateProfile />
+               </NotLoggedInRedirect>
+            ),
          },
       ],
    },
@@ -37,7 +43,11 @@ const router = createBrowserRouter([
       children: [
          {
             path: "/auth",
-            element: <Login />,
+            element: (
+               <LoggedInRedirect>
+                  <Login />
+               </LoggedInRedirect>
+            ),
          },
       ],
    },
