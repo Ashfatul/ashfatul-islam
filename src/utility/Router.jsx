@@ -1,24 +1,24 @@
 import { createBrowserRouter } from "react-router-dom";
-import FrontEndLayout from "../layout/FrontEndLayout";
 import BackEndLayout from "../layout/BackEndLayout";
-import AuthLayout from "../layout/AuthLayout";
 import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 import Login from "../components/Login/Login";
 import LoggedInRedirect from "../Redirect/LoggedInRedirect";
 import NotLoggedInRedirect from "../Redirect/NotLoggedInRedirect";
 import Dashboard from "../components/Dashboard/Dashboard";
+import Home from "../pages/Home/Home";
 
 const router = createBrowserRouter([
    {
       path: "/",
-      element: <FrontEndLayout />,
-      errorElement: "Something went wrong",
-      children: [
-         {
-            path: "/",
-            element: "Front End",
-         },
-      ],
+      element: <Home />,
+   },
+   {
+      path: "/auth",
+      element: (
+         <LoggedInRedirect>
+            <Login />
+         </LoggedInRedirect>
+      ),
    },
    {
       path: "/root",
@@ -38,20 +38,6 @@ const router = createBrowserRouter([
                <NotLoggedInRedirect>
                   <UpdateProfile />
                </NotLoggedInRedirect>
-            ),
-         },
-      ],
-   },
-   {
-      path: "/auth",
-      element: <AuthLayout />,
-      children: [
-         {
-            path: "/auth",
-            element: (
-               <LoggedInRedirect>
-                  <Login />
-               </LoggedInRedirect>
             ),
          },
       ],
