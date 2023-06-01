@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../utility/AuthProvider";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Login() {
    const navigate = useNavigate();
@@ -29,6 +29,13 @@ export default function Login() {
                available items on the site, you are required to log in.
             </h2>
             <p>Please Provide Authentication Credentials To Login.</p>
+
+            <NavLink
+               to="/"
+               className="mt-5 block hover:text-orange-500 underline"
+            >
+               Back To Frontend
+            </NavLink>
          </div>
          <div className="form-container flex-1 flex justify-center">
             <form

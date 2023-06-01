@@ -3,5 +3,8 @@
 @tailwind utilities;
 
 .container {
-   @apply max-w-screen-xl mx-auto py-10 px-5 min-h-screen;
+   @apply max-w-screen-xl mx-auto px-5;
+}
+.active {
+   @apply bg-transparent underline underline-offset-4 font-bold text-blue-700;
 }

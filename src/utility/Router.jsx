@@ -5,12 +5,13 @@ import Login from "../components/Login/Login";
 import LoggedInRedirect from "../Redirect/LoggedInRedirect";
 import NotLoggedInRedirect from "../Redirect/NotLoggedInRedirect";
 import Dashboard from "../components/Dashboard/Dashboard";
-import Home from "../pages/Home/Home";
+import Error404 from "../components/Error404/Error404";
+import FrontEndLayout from "../layout/FrontEndLayout";
 
 const router = createBrowserRouter([
    {
       path: "/",
-      element: <Home />,
+      element: <FrontEndLayout />,
    },
    {
       path: "/auth",
@@ -22,29 +23,25 @@ const router = createBrowserRouter([
    },
    {
       path: "/root",
-      element: <BackEndLayout />,
+      element: (
+         <NotLoggedInRedirect>
+            <BackEndLayout />
+         </NotLoggedInRedirect>
+      ),
       children: [
          {
             path: "/root",
-            element: (
-               <NotLoggedInRedirect>
-                  <Dashboard />
-               </NotLoggedInRedirect>
-            ),
+            element: <Dashboard />,
          },
          {
             path: "/root/update-profile",
-            element: (
-               <NotLoggedInRedirect>
-                  <UpdateProfile />
-               </NotLoggedInRedirect>
-            ),
+            element: <UpdateProfile />,
          },
       ],
    },
    {
       path: "*",
-      element: "Error 404",
+      element: <Error404 />,
    },
 ]);
 
