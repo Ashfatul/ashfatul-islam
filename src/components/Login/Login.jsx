@@ -24,7 +24,9 @@ export default function Login() {
    return (
       <div className="container block text-center md:text-left md:flex items-center min-h-screen">
          <div className="content flex-1 mb-10 md:mb-0">
-            <h1 className="text-5xl mb-10">Welcome to Backend</h1>
+            <h1 className="text-3xl md:text-5xl mb-10 mt-10 md:mt-0">
+               Welcome to Backend
+            </h1>
             <h2 className="text-xl mb-10">
                To access the functionality of performing CRUD operations on the
                available items on the site, you are required to log in.
@@ -33,7 +35,7 @@ export default function Login() {
 
             <NavLink
                to="/"
-               className="mt-5 flex gap-2 w-fit items-center hover:text-orange-500 underline underline-offset-4"
+               className="mt-5 flex gap-2 w-full justify-center md:w-fit items-center hover:text-orange-500 underline underline-offset-4"
             >
                <FaArrowLeft /> Back To Frontend
             </NavLink>
