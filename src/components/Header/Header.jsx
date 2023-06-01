@@ -4,14 +4,14 @@ import { Link, NavLink } from "react-router-dom";
 export default function Header() {
    const menuItems = (
       <>
-         <li>
+         {/* <li>
             <NavLink
                to="#intro"
                className="py-2 lg:py-4 text-gray-400 font-bpy-2 px-4 lg:py-4old uppercase hover:bg-transparent hover:text-blue-500 focus:text-blue-700 focus:bg-transparent"
             >
                Intro
             </NavLink>
-         </li>
+         </li> */}
          <li>
             <NavLink
                to="#about"
@@ -51,6 +51,14 @@ export default function Header() {
                className="py-2 px-4 lg:py-4 text-gray-400 font-bold uppercase hover:bg-transparent hover:text-blue-500 focus:text-blue-700 focus:bg-transparent"
             >
                Contacts
+            </NavLink>
+         </li>
+         <li>
+            <NavLink
+               to="/auth"
+               className="py-2 px-4 lg:py-4 text-gray-400 font-bold uppercase hover:bg-transparent hover:text-blue-500 focus:text-blue-700 focus:bg-transparent"
+            >
+               Admin
             </NavLink>
          </li>
       </>

@@ -7,7 +7,7 @@ export default function About() {
       <div className="bg-slate-800" id="about">
          <div className="container">
             <SectionTitle title="About" color="white" />
-            <div className="block sm:flex gap-5 px-3 py-10 items-center text-white w-full lg:w-3/5 md:w-4/5 md:mx-auto">
+            <div className="block sm:flex gap-5 py-10 items-center text-white w-full lg:w-3/5 md:w-4/5 md:mx-auto">
                <div className="photo">
                   <img
                      src="https://i.ibb.co/TqYtPFG/ashfatul-photo.jpg"

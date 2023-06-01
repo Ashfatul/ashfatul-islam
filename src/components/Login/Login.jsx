@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../utility/AuthProvider";
 import { NavLink, useNavigate } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
 
 export default function Login() {
    const navigate = useNavigate();
@@ -21,7 +22,7 @@ export default function Login() {
    };
 
    return (
-      <div className="container block text-center md:text-left md:flex items-center">
+      <div className="container block text-center md:text-left md:flex items-center min-h-screen">
          <div className="content flex-1 mb-10 md:mb-0">
             <h1 className="text-5xl mb-10">Welcome to Backend</h1>
             <h2 className="text-xl mb-10">
@@ -32,9 +33,9 @@ export default function Login() {
 
             <NavLink
                to="/"
-               className="mt-5 block hover:text-orange-500 underline"
+               className="mt-5 flex gap-2 w-fit items-center hover:text-orange-500 underline underline-offset-4"
             >
-               Back To Frontend
+               <FaArrowLeft /> Back To Frontend
             </NavLink>
          </div>
          <div className="form-container flex-1 flex justify-center">
