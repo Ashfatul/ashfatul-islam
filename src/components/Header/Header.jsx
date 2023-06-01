@@ -14,7 +14,8 @@ export default function Header() {
          </li>
          <li>
             <NavLink
-               to="/a"
+               to="#about"
+               end
                className="py-2 px-4 lg:py-4 text-gray-400 font-bold uppercase hover:bg-transparent hover:text-blue-500 focus:text-blue-700 focus:bg-transparent"
             >
                About
@@ -56,7 +57,7 @@ export default function Header() {
    );
    return (
       <Headroom>
-         <div className="shadow-sm">
+         <div className="shadow-sm bg-white">
             <div className="container">
                <div className="navbar min-h-fit p-0 flex justify-between">
                   <div className="">
