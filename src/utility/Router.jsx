@@ -7,11 +7,13 @@ import NotLoggedInRedirect from "../Redirect/NotLoggedInRedirect";
 import Dashboard from "../components/Dashboard/Dashboard";
 import Error404 from "../components/Error404/Error404";
 import FrontEndLayout from "../layout/FrontEndLayout";
+import Home from "../pages/Home/Home";
 
 const router = createBrowserRouter([
    {
       path: "/",
       element: <FrontEndLayout />,
+      children: [{ path: "/", element: <Home /> }],
    },
    {
       path: "/auth",
