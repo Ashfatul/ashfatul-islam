@@ -12,6 +12,7 @@ import ProjectAddUpdateForm from "../components/ProjectAddUpdateForm/ProjectAddU
 import Projects from "../components/Projects/Projects";
 import About from "../components/About/About";
 import Skills from "../components/Skills/Skills";
+import AllProjects from "../components/Projects/AllProjects";
 
 const router = createBrowserRouter([
    {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
          { path: "/", element: <Home /> },
          {
             path: "/all-projects",
-            element: <Projects title="All Projects" showmore={false} />,
+            element: <AllProjects />,
          },
          {
             path: "/about",
@@ -33,13 +34,7 @@ const router = createBrowserRouter([
          },
          {
             path: "/projects",
-            element: (
-               <Projects
-                  title="Most Recent Projects"
-                  showmore={true}
-                  limit={3}
-               />
-            ),
+            element: <Projects />,
          },
       ],
    },
