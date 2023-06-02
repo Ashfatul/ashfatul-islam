@@ -15,6 +15,11 @@ export default function SideBar() {
                   Backend Profile
                </NavLink>
             </li>
+            <li>
+               <NavLink to="add-project" end>
+                  Add New Project
+               </NavLink>
+            </li>
          </ul>
       </div>
    );

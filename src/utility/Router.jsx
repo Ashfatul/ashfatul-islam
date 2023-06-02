@@ -8,6 +8,7 @@ import Dashboard from "../components/Dashboard/Dashboard";
 import Error404 from "../components/Error404/Error404";
 import FrontEndLayout from "../layout/FrontEndLayout";
 import Home from "../pages/Home/Home";
+import ProjectAddUpdateForm from "../components/ProjectAddUpdateForm/ProjectAddUpdateForm";
 
 const router = createBrowserRouter([
    {
@@ -38,6 +39,15 @@ const router = createBrowserRouter([
          {
             path: "/root/update-profile",
             element: <UpdateProfile />,
+         },
+         {
+            path: "/root/add-project",
+            element: <ProjectAddUpdateForm isUpdating={false} />,
+         },
+         {
+            path: "/root/update-project/:id",
+            element: <ProjectAddUpdateForm isUpdating />,
+            // loader: fetch("/"),
          },
       ],
    },

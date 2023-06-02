@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import SideBar from "../components/SideBar/SideBar";
 import { VscListSelection } from "react-icons/vsc";
 import { useContext } from "react";
@@ -18,9 +18,9 @@ export default function BackEndLayout() {
    return (
       <>
          <div className="header p-3 flex justify-between items-center bg-slate-600 text-white">
-            <NavLink to="/root" className="text-3xl">
+            <Link to="/root" className="text-3xl text-white">
                Ashfatul
-            </NavLink>
+            </Link>
 
             <NavLink to="/" target="_blank" className="text-xl hidden sm:block">
                View Website
