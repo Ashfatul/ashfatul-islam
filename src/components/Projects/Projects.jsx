@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 export default function Projects({ title, showmore, limit }) {
    const [projects, setProjects] = useState();
    useEffect(() => {
-      fetch(`http://localhost:5000/projects/?limit=${limit}`)
+      fetch(`https://ashfatul-islam-server.vercel.app/projects/?limit=${limit}`)
          .then((res) => res.json())
          .then((data) => setProjects(data))
          .catch((e) => console.log(e));

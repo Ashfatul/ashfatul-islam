@@ -7,7 +7,9 @@ export default function Projects() {
    const { isLoading, isError, data, error, refetch } = useQuery({
       queryKey: ["projects"],
       queryFn: async () => {
-         const data = await fetch("http://localhost:5000/projects");
+         const data = await fetch(
+            "https://ashfatul-islam-server.vercel.app/projects"
+         );
          return data.json();
       },
    });
@@ -37,7 +39,7 @@ export default function Projects() {
                         </tr>
                      </thead>
                      <tbody>
-                        {data.map((project) => (
+                        {data?.map((project) => (
                            <SingleProject
                               key={project._id}
                               project={project}
