@@ -47,7 +47,6 @@ const router = createBrowserRouter([
          {
             path: "/root/update-project/:id",
             element: <ProjectAddUpdateForm isUpdating />,
-            // loader: fetch("/"),
          },
       ],
    },

@@ -1,16 +1,31 @@
-import { useLoaderData } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import { useForm } from "react-hook-form";
 import toastr from "toastr";
-// import { useQuery } from "react-query";
+import { useEffect, useState } from "react";
 
 export default function ProjectAddUpdateForm({ isUpdating }) {
+   const [data, setData] = useState();
+   const { id } = useParams();
+
+   useEffect(() => {
+      const fetchProject = async () => {
+         await fetch(`http://localhost:5000/update-project/${id}`)
+            .then((res) => res.json())
+            .then((data) => setData(data))
+            .catch((e) => console.log(e));
+      };
+      if (isUpdating && id) {
+         fetchProject();
+      }
+   }, [id, isUpdating]);
+
    const {
       register,
       handleSubmit,
       formState: { errors },
    } = useForm();
-   const data = useLoaderData();
+
    const addNewProject = (info) => {
       fetch("http://localhost:5000/projects", {
          method: "POST",
@@ -21,10 +36,26 @@ export default function ProjectAddUpdateForm({ isUpdating }) {
       })
          .then((res) => res.json())
          .then((res) => {
-            toastr.success("success", res);
+            toastr.success("Added Successfully", res);
          })
          .catch((e) => console.log(e));
    };
+
+   const handleUpdate = (info) => {
+      fetch(`http://localhost:5000/update-project/${id}`, {
+         method: "PUT",
+         headers: {
+            "content-type": "application/json",
+         },
+         body: JSON.stringify(info),
+      })
+         .then((res) => res.json())
+         .then((res) => {
+            toastr.success("Updated Successfully", res);
+         })
+         .catch((e) => console.log(e));
+   };
+
    return (
       <div>
          <SectionTitle
@@ -32,7 +63,11 @@ export default function ProjectAddUpdateForm({ isUpdating }) {
             color="black"
          />
 
-         <form onSubmit={handleSubmit((info) => addNewProject(info))}>
+         <form
+            onSubmit={handleSubmit((info) => {
+               isUpdating ? handleUpdate(info) : addNewProject(info);
+            })}
+         >
             <div className="form-control w-4/5 mx-auto bg-white rounded-lg p-5">
                <label className="label">
                   <span className="label-text">Project Title</span>

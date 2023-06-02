@@ -11,13 +11,13 @@ export default function SideBar() {
                </NavLink>
             </li>
             <li>
-               <NavLink to="update-profile" end>
-                  Backend Profile
+               <NavLink to="add-project" end>
+                  Add New Project
                </NavLink>
             </li>
             <li>
-               <NavLink to="add-project" end>
-                  Add New Project
+               <NavLink to="update-profile" end>
+                  Backend Profile
                </NavLink>
             </li>
          </ul>
