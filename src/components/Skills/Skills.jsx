@@ -24,7 +24,7 @@ import SectionTitle from "../SectionTitle/SectionTitle";
 
 export default function Skills() {
    return (
-      <div className="container">
+      <div className="container" id="skills">
          <SectionTitle title="Skills Set" color="black" />
          <div className="frontend-technology flex flex-col items-center mb-10">
             <h3 className="text-xl">Frontend Technology&apos;s</h3>

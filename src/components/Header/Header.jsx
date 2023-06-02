@@ -4,18 +4,9 @@ import { Link, NavLink } from "react-router-dom";
 export default function Header() {
    const menuItems = (
       <>
-         {/* <li>
-            <NavLink
-               to="#intro"
-               className="py-2 lg:py-4 text-gray-400 font-bpy-2 px-4 lg:py-4old uppercase hover:bg-transparent hover:text-blue-500 focus:text-blue-700 focus:bg-transparent"
-            >
-               Intro
-            </NavLink>
-         </li> */}
          <li>
             <NavLink
                to="#about"
-               end
                className="py-2 px-4 lg:py-4 text-gray-400 font-bold uppercase hover:bg-transparent hover:text-blue-500 focus:text-blue-700 focus:bg-transparent"
             >
                About
@@ -23,7 +14,7 @@ export default function Header() {
          </li>
          <li>
             <NavLink
-               to="/a"
+               to="#skills"
                className="py-2 px-4 lg:py-4 text-gray-400 font-bold uppercase hover:bg-transparent hover:text-blue-500 focus:text-blue-700 focus:bg-transparent"
             >
                Skills
@@ -31,15 +22,7 @@ export default function Header() {
          </li>
          <li>
             <NavLink
-               to="/a"
-               className="py-2 px-4 lg:py-4 text-gray-400 font-bold uppercase hover:bg-transparent hover:text-blue-500 focus:text-blue-700 focus:bg-transparent"
-            >
-               Resume
-            </NavLink>
-         </li>
-         <li>
-            <NavLink
-               to="/a"
+               to="#projects"
                className="py-2 px-4 lg:py-4 text-gray-400 font-bold uppercase hover:bg-transparent hover:text-blue-500 focus:text-blue-700 focus:bg-transparent"
             >
                Projects
@@ -47,7 +30,7 @@ export default function Header() {
          </li>
          <li>
             <NavLink
-               to="/a"
+               to="#contacts"
                className="py-2 px-4 lg:py-4 text-gray-400 font-bold uppercase hover:bg-transparent hover:text-blue-500 focus:text-blue-700 focus:bg-transparent"
             >
                Contacts
