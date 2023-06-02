@@ -43,9 +43,9 @@ export default function Footer() {
                <div className="about min-w-[300px] mb-10 text-center flex-1">
                   <h1 className="text-white text-2xl mb-5">Ashfatul Islam</h1>
                   <p className="text-white text-center">
-                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                     Voluptates incidunt perferendis repellat soluta laboriosam
-                     delectus enim nam qui temporibus quis.
+                     Ashfatul Islam, a MERN Stack developer based in Bangladesh,
+                     has created this portfolio website to showcase his skills
+                     and projects.
                   </p>
                </div>
                <div className="social min-w-[300px] flex-1 flex items-center flex-col">
@@ -53,8 +53,8 @@ export default function Footer() {
                   <ul className="gap-8">
                      <li>
                         <Link
-                           to=""
-                           className="flex items-center gap-2 text-white my-2"
+                           to="https://github.com/ashfatul"
+                           className="flex items-center gap-2 text-white my-2 hover:text-orange-200"
                         >
                            <FaGithub /> GitHub
                         </Link>
@@ -62,8 +62,8 @@ export default function Footer() {
 
                      <li>
                         <Link
-                           to=""
-                           className="flex items-center gap-2 text-white my-2"
+                           to="https://linkedin.com/in/ashfatul"
+                           className="flex items-center gap-2 text-white my-2 hover:text-orange-200"
                         >
                            <FaLinkedin /> LinkedIn
                         </Link>
@@ -71,8 +71,8 @@ export default function Footer() {
 
                      <li>
                         <Link
-                           to=""
-                           className="flex items-center gap-2 text-white my-2"
+                           to="mailto:ashfatul.islam@gmail.com"
+                           className="flex items-center gap-2 text-white my-2 hover:text-orange-200"
                         >
                            <FaEnvelope /> Email
                         </Link>
