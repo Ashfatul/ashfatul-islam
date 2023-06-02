@@ -10,7 +10,7 @@ export default function SingleProject({ data }) {
          </figure>
          <div className="card-body">
             <h2 className="card-title">{title}</h2>
-            <div className="badge badge-secondary">{date}</div>
+            <div className="badge badge-accent">{date}</div>
             <p className="my-5">{description}</p>
             <div className="card-actions justify-start">
                <div className="badge badge-outline hover:text-blue-500 cursor-default">

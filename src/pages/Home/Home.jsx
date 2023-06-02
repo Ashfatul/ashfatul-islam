@@ -9,7 +9,7 @@ export default function Home() {
          <Intro />
          <About />
          <Skills />
-         <Projects />
+         <Projects title="Most Recent Projects" showmore={true} limit={3} />
       </>
    );
 }

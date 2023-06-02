@@ -9,12 +9,19 @@ import Error404 from "../components/Error404/Error404";
 import FrontEndLayout from "../layout/FrontEndLayout";
 import Home from "../pages/Home/Home";
 import ProjectAddUpdateForm from "../components/ProjectAddUpdateForm/ProjectAddUpdateForm";
+import Projects from "../components/Projects/Projects";
 
 const router = createBrowserRouter([
    {
       path: "/",
       element: <FrontEndLayout />,
-      children: [{ path: "/", element: <Home /> }],
+      children: [
+         { path: "/", element: <Home /> },
+         {
+            path: "/all-projects",
+            element: <Projects title="All Projects" showmore={false} />,
+         },
+      ],
    },
    {
       path: "/auth",
