@@ -16,14 +16,14 @@ export default function SingleProject({ project, refetch }) {
       <tr>
          <td>
             <div className="photo">
-               <div className="mask mask-squircle w-12 h-12">
+               <div className="w-20 h-20">
                   <img src={photo} alt={title} />
                </div>
             </div>
          </td>
          <td>
             <div className="flex items-center space-x-3">
-               <div>
+               <div className="whitespace-break-spaces">
                   <div className="font-bold">{title}</div>
                   <div className="text-sm opacity-50">{date}</div>
                </div>
