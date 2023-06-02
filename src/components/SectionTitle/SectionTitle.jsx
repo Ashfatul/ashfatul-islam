@@ -1,9 +1,9 @@
-export default function SectionTitle({ title, color }) {
+export default function SectionTitle({ title }) {
    return (
       <div className="title-container py-10 flex items-center flex-col">
-         <div className={`w-72 h-px bg-${color}`}></div>
-         <div className={`my-3 uppercase text-${color} text-4xl`}>{title}</div>
-         <div className={`w-72 h-px bg-${color}`}></div>
+         <div className={`w-72 h-px bg-black`}></div>
+         <div className={`my-3 uppercase text-black text-4xl`}>{title}</div>
+         <div className={`w-72 h-px bg-black`}></div>
       </div>
    );
 }

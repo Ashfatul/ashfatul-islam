@@ -4,10 +4,10 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function About() {
    return (
-      <div className="bg-slate-800" id="about">
+      <div id="about">
          <div className="container">
-            <SectionTitle title="About" color="white" />
-            <div className="block sm:flex gap-5 py-10 items-center text-white w-full lg:w-3/5 md:w-4/5 md:mx-auto">
+            <SectionTitle title="About" />
+            <div className="block sm:flex gap-5 py-10 items-center w-full lg:w-3/5 md:w-4/5 md:mx-auto">
                <div className="photo">
                   <img
                      src="https://i.ibb.co/TqYtPFG/ashfatul-photo.jpg"

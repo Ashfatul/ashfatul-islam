@@ -6,7 +6,15 @@ export default function Header() {
       <>
          <li>
             <NavLink
-               to="#about"
+               to="/"
+               className="py-2 px-4 lg:py-4 text-gray-400 font-bold uppercase hover:bg-transparent hover:text-blue-500 focus:text-blue-700 focus:bg-transparent"
+            >
+               Intro
+            </NavLink>
+         </li>
+         <li>
+            <NavLink
+               to="/about"
                className="py-2 px-4 lg:py-4 text-gray-400 font-bold uppercase hover:bg-transparent hover:text-blue-500 focus:text-blue-700 focus:bg-transparent"
             >
                About
@@ -14,7 +22,7 @@ export default function Header() {
          </li>
          <li>
             <NavLink
-               to="#skills"
+               to="/skills"
                className="py-2 px-4 lg:py-4 text-gray-400 font-bold uppercase hover:bg-transparent hover:text-blue-500 focus:text-blue-700 focus:bg-transparent"
             >
                Skills
@@ -22,18 +30,10 @@ export default function Header() {
          </li>
          <li>
             <NavLink
-               to="#projects"
+               to="/projects"
                className="py-2 px-4 lg:py-4 text-gray-400 font-bold uppercase hover:bg-transparent hover:text-blue-500 focus:text-blue-700 focus:bg-transparent"
             >
                Projects
-            </NavLink>
-         </li>
-         <li>
-            <NavLink
-               to="#contacts"
-               className="py-2 px-4 lg:py-4 text-gray-400 font-bold uppercase hover:bg-transparent hover:text-blue-500 focus:text-blue-700 focus:bg-transparent"
-            >
-               Contacts
             </NavLink>
          </li>
          <li>

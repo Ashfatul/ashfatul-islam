@@ -10,6 +10,8 @@ import FrontEndLayout from "../layout/FrontEndLayout";
 import Home from "../pages/Home/Home";
 import ProjectAddUpdateForm from "../components/ProjectAddUpdateForm/ProjectAddUpdateForm";
 import Projects from "../components/Projects/Projects";
+import About from "../components/About/About";
+import Skills from "../components/Skills/Skills";
 
 const router = createBrowserRouter([
    {
@@ -20,6 +22,24 @@ const router = createBrowserRouter([
          {
             path: "/all-projects",
             element: <Projects title="All Projects" showmore={false} />,
+         },
+         {
+            path: "/about",
+            element: <About />,
+         },
+         {
+            path: "/skills",
+            element: <Skills />,
+         },
+         {
+            path: "/projects",
+            element: (
+               <Projects
+                  title="Most Recent Projects"
+                  showmore={true}
+                  limit={3}
+               />
+            ),
          },
       ],
    },
