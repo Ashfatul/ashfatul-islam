@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import { useForm } from "react-hook-form";
+import toastr from "toastr";
 // import { useQuery } from "react-query";
 
 export default function ProjectAddUpdateForm({ isUpdating }) {
@@ -11,13 +12,18 @@ export default function ProjectAddUpdateForm({ isUpdating }) {
    } = useForm();
    const data = useLoaderData();
    const addNewProject = (info) => {
-      fetch("https://ashfatul-islam-server.vercel.app/projects", {
+      fetch("http://localhost:5000/projects", {
          method: "POST",
          headers: {
             "content-type": "application/json",
          },
          body: JSON.stringify(info),
-      });
+      })
+         .then((res) => res.json())
+         .then((res) => {
+            toastr.success("success", res);
+         })
+         .catch((e) => console.log(e));
    };
    return (
       <div>
