@@ -5,7 +5,7 @@ import Tag from "./Tag";
 export default function SingleProject({ data }) {
    const { title, photo, description, tags, date, github, liveSite } = data;
    return (
-      <div className="card bg-base-100 shadow-xl">
+      <div className="card bg-base-100 shadow-xl overflow-hidden">
          <img
             src={photo}
             alt={title}

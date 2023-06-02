@@ -1,3 +1,90 @@
+import { Link } from "react-router-dom";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+   SiExpress,
+   SiMongodb,
+   SiNodedotjs,
+   SiReact,
+   SiTailwindcss,
+} from "react-icons/si";
+
 export default function Footer() {
-   return <div>Footer</div>;
+   return (
+      <div className="bg-slate-900 mt-20">
+         <div className="container px-3 py-10">
+            <div className="flex flex-wrap">
+               <div className="technology min-w-[300px] flex-1 flex items-center flex-col">
+                  <h2 className="text-white text-xl mb-5 text-center">
+                     Technology Used
+                  </h2>
+
+                  <ul>
+                     <li className="flex gap-2 text-white my-2">
+                        <SiReact /> ReactJS
+                     </li>
+
+                     <li className="flex gap-2 text-white my-2">
+                        <SiTailwindcss /> Tailwind CSS
+                     </li>
+
+                     <li className="flex gap-2 text-white my-2">
+                        <SiNodedotjs /> NodeJS
+                     </li>
+
+                     <li className="flex gap-2 text-white my-2">
+                        <SiExpress /> Express
+                     </li>
+
+                     <li className="flex gap-2 text-white my-2">
+                        <SiMongodb /> MongoDB
+                     </li>
+                  </ul>
+               </div>
+               <div className="about min-w-[300px] mb-10 text-center flex-1">
+                  <h1 className="text-white text-2xl mb-5">Ashfatul Islam</h1>
+                  <p className="text-white text-center">
+                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                     Voluptates incidunt perferendis repellat soluta laboriosam
+                     delectus enim nam qui temporibus quis.
+                  </p>
+               </div>
+               <div className="social min-w-[300px] flex-1 flex items-center flex-col">
+                  <h2 className="text-white text-xl mb-5">Find Me On</h2>
+                  <ul className="gap-8">
+                     <li>
+                        <Link
+                           to=""
+                           className="flex items-center gap-2 text-white my-2"
+                        >
+                           <FaGithub /> GitHub
+                        </Link>
+                     </li>
+
+                     <li>
+                        <Link
+                           to=""
+                           className="flex items-center gap-2 text-white my-2"
+                        >
+                           <FaLinkedin /> LinkedIn
+                        </Link>
+                     </li>
+
+                     <li>
+                        <Link
+                           to=""
+                           className="flex items-center gap-2 text-white my-2"
+                        >
+                           <FaEnvelope /> Email
+                        </Link>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div className="copyright text-center text-white py-5 bg-black">
+            Copyright &copy; Ashfatul | All right reserved |{" "}
+            <span>{new Date().getFullYear()}</span>
+         </div>
+      </div>
+   );
 }
