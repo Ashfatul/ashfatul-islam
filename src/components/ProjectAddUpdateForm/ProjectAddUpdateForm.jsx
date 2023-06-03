@@ -70,7 +70,7 @@ export default function ProjectAddUpdateForm({ isUpdating }) {
                isUpdating ? handleUpdate(info) : addNewProject(info);
             })}
          >
-            <div className="form-control w-4/5 mx-auto bg-white rounded-lg p-5">
+            <div className="form-control w-full md:w-4/5 mx-auto bg-white rounded-lg p-5">
                <label className="label">
                   <span className="label-text">Project Title</span>
                </label>
