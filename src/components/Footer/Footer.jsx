@@ -10,7 +10,7 @@ import {
 
 export default function Footer() {
    return (
-      <div className="bg-slate-900 mt-20">
+      <div className="bg-slate-800 mt-20">
          <div className="container px-3 py-10">
             <div className="flex flex-wrap">
                <div className="technology min-w-[300px] flex-1 flex items-center flex-col">

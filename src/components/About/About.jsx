@@ -10,9 +10,9 @@ export default function About() {
             <div className="block sm:flex gap-5 py-10 items-center w-full lg:w-3/5 md:w-4/5 md:mx-auto">
                <div className="photo">
                   <img
-                     src="https://i.ibb.co/TqYtPFG/ashfatul-photo.jpg"
+                     src="https://i.ibb.co/cFfJ18s/ashfatul-photo-transparent.png"
                      alt="ashfatul photo"
-                     className="h-[250px] w-[250px] object-cover object-center rounded-lg mx-auto"
+                     className="h-[250px] w-[250px] object-cover object-center rounded-lg mx-auto bg-gray-300 -skew-x-3 border-cyan-600 border-8"
                   />
                </div>
                <div className="about flex-1 mt-10 sm:mt-0">

@@ -1,7 +1,15 @@
 import Headroom from "react-headroom";
 import { Link, NavLink } from "react-router-dom";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import { useState } from "react";
 
 export default function Header() {
+   const [darkTheme, setDarkTheme] = useState(true);
+
+   const handleThemeChange = () => {
+      setDarkTheme(!darkTheme);
+   };
+
    const menuItems = (
       <>
          <li>
@@ -36,19 +44,12 @@ export default function Header() {
                Projects
             </NavLink>
          </li>
-         <li>
-            <NavLink
-               to="/auth"
-               className="py-2 px-4 lg:py-4 text-gray-400 font-bold uppercase hover:bg-transparent hover:text-blue-500 focus:text-blue-700 focus:bg-transparent"
-            >
-               Admin
-            </NavLink>
-         </li>
+         <ThemeToggle dark={darkTheme} toggleTheme={handleThemeChange} />
       </>
    );
    return (
       <Headroom>
-         <div className="shadow-sm bg-white">
+         <div className="shadow-sm">
             <div className="container">
                <div className="navbar min-h-fit p-0 flex justify-between">
                   <div className="">
