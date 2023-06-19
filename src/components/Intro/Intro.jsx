@@ -3,7 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 export default function Intro() {
    return (
-      <div className="uppercase" id="intro">
+      <div id="intro">
          <div className="container">
             <div className="content min-h-[calc(100vh-100px)] flex flex-col justify-center px-3 py-5">
                <h3 className="text-2xl sm:text-3xl md:text-4xl">Hi There,</h3>

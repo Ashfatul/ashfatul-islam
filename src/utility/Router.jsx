@@ -12,7 +12,6 @@ import ProjectAddUpdateForm from "../components/ProjectAddUpdateForm/ProjectAddU
 import Projects from "../components/Projects/Projects";
 import About from "../components/About/About";
 import Skills from "../components/Skills/Skills";
-import AllProjects from "../components/Projects/AllProjects";
 
 const router = createBrowserRouter([
    {
@@ -20,10 +19,6 @@ const router = createBrowserRouter([
       element: <FrontEndLayout />,
       children: [
          { path: "/", element: <Home /> },
-         {
-            path: "/all-projects",
-            element: <AllProjects />,
-         },
          {
             path: "/about",
             element: <About />,

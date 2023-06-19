@@ -2,12 +2,25 @@ import Headroom from "react-headroom";
 import { Link, NavLink } from "react-router-dom";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import { useState } from "react";
+import { useEffect } from "react";
 
 export default function Header() {
-   const [darkTheme, setDarkTheme] = useState(true);
+   const [darkTheme, setDarkTheme] = useState(
+      localStorage.getItem("darkTheme")
+         ? JSON.parse(localStorage.getItem("darkTheme"))
+         : true
+   );
+
+   useEffect(() => {
+      if (!darkTheme) {
+         document.documentElement.classList.remove("dark");
+      }
+   }, [darkTheme]);
 
    const handleThemeChange = () => {
       setDarkTheme(!darkTheme);
+      document.documentElement.classList.toggle("dark");
+      localStorage.setItem("darkTheme", !darkTheme);
    };
 
    const menuItems = (
