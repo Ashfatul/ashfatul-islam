@@ -18,8 +18,18 @@ export default function SideBar() {
                </NavLink>
             </li>
             <li>
-               <NavLink to="update-profile" className="flex gap-3" end>
-                  <FaUser /> Profile Update
+               <NavLink to="frontend-profile" className="flex gap-3" end>
+                  <FaUser /> Frontend Profile
+               </NavLink>
+            </li>
+            <li>
+               <NavLink to="backend-profile" className="flex gap-3" end>
+                  <FaUser /> Backend Profile
+               </NavLink>
+            </li>
+            <li>
+               <NavLink to="social-links" className="flex gap-3" end>
+                  <FaUser /> Social Links
                </NavLink>
             </li>
          </ul>

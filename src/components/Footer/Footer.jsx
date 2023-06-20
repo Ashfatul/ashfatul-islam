@@ -7,8 +7,16 @@ import {
    SiReact,
    SiTailwindcss,
 } from "react-icons/si";
+import { useEffect, useState } from "react";
 
 export default function Footer({ user }) {
+   const [social, setSocial] = useState({});
+   useEffect(() => {
+      fetch("https://ashfatul-islam-server.vercel.app/social-links/")
+         .then((res) => res.json())
+         .then((data) => setSocial(data))
+         .catch((e) => console.log(e));
+   }, []);
    return (
       <div className="bg-slate-800 mt-20">
          <div className="container px-3 py-10">
@@ -53,32 +61,38 @@ export default function Footer({ user }) {
                <div className="social min-w-[300px] flex-1 flex items-center flex-col">
                   <h2 className="text-white text-xl mb-5">Find Me On</h2>
                   <ul className="gap-8">
-                     <li>
-                        <Link
-                           to="https://github.com/ashfatul"
-                           className="flex items-center gap-2 text-white my-2 hover:text-orange-200"
-                        >
-                           <FaGithub /> GitHub
-                        </Link>
-                     </li>
+                     {social.github && (
+                        <li>
+                           <Link
+                              to={social.github}
+                              className="flex items-center gap-2 text-white my-2 hover:text-orange-200"
+                           >
+                              <FaGithub /> GitHub
+                           </Link>
+                        </li>
+                     )}
 
-                     <li>
-                        <Link
-                           to="https://linkedin.com/in/ashfatul"
-                           className="flex items-center gap-2 text-white my-2 hover:text-orange-200"
-                        >
-                           <FaLinkedin /> LinkedIn
-                        </Link>
-                     </li>
+                     {social.linkedin && (
+                        <li>
+                           <Link
+                              to={social.linkedin}
+                              className="flex items-center gap-2 text-white my-2 hover:text-orange-200"
+                           >
+                              <FaLinkedin /> LinkedIn
+                           </Link>
+                        </li>
+                     )}
 
-                     <li>
-                        <Link
-                           to="mailto:ashfatul.islam@gmail.com"
-                           className="flex items-center gap-2 text-white my-2 hover:text-orange-200"
-                        >
-                           <FaEnvelope /> Email
-                        </Link>
-                     </li>
+                     {social.email && (
+                        <li>
+                           <Link
+                              to={`mailto:${social.email}`}
+                              className="flex items-center gap-2 text-white my-2 hover:text-orange-200"
+                           >
+                              <FaEnvelope /> Email
+                           </Link>
+                        </li>
+                     )}
                   </ul>
                </div>
             </div>

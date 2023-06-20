@@ -7,6 +7,7 @@ import {
    FaRegFilePdf,
    FaUser,
    FaRegFileCode,
+   FaPen,
 } from "react-icons/fa";
 import { HiPhotograph } from "react-icons/hi";
 
@@ -31,12 +32,12 @@ export default function UpdateFrontEndProfile() {
    }, []);
 
    return (
-      <div className="form-container mt-5">
+      <div className="form-container mt-5 flex-1">
          <form
             onSubmit={handleSubmit(update)}
             className="bg-white rounded-lg p-5 w-full"
          >
-            <h2 className="text-2xl text-center mb-5">FrontEnd Profile!</h2>
+            <h2 className="text-2xl text-center mb-5">Frontend Profile!</h2>
 
             <input type="hidden" defaultValue={"admin"} {...register("role")} />
 
@@ -64,6 +65,28 @@ export default function UpdateFrontEndProfile() {
 
             <div className="form-control w-full">
                <label className="label">
+                  <span className="label-text">Name</span>
+               </label>
+               <label className="input-group">
+                  <span>
+                     <FaUser />
+                  </span>
+                  <input
+                     type="text"
+                     placeholder={"Jhon doe"}
+                     defaultValue={user.displayName || ""}
+                     className="input input-bordered w-full"
+                     {...register("displayName", { required: true })}
+                  />
+               </label>
+            </div>
+
+            {errors.name && (
+               <span className="text-red-500">This field is required</span>
+            )}
+
+            <div className="form-control w-full">
+               <label className="label">
                   <span className="label-text">
                      Comma Separated Designations
                   </span>
@@ -84,28 +107,6 @@ export default function UpdateFrontEndProfile() {
 
             {errors.designation && (
                <span className="text-red-500">Designation is required</span>
-            )}
-
-            <div className="form-control w-full">
-               <label className="label">
-                  <span className="label-text">Name</span>
-               </label>
-               <label className="input-group">
-                  <span>
-                     <FaUser />
-                  </span>
-                  <input
-                     type="text"
-                     placeholder={"Jhon doe"}
-                     defaultValue={user.displayName || ""}
-                     className="input input-bordered w-full"
-                     {...register("displayName", { required: true })}
-                  />
-               </label>
-            </div>
-
-            {errors.name && (
-               <span className="text-red-500">This field is required</span>
             )}
 
             <div className="form-control w-full">
@@ -164,6 +165,30 @@ export default function UpdateFrontEndProfile() {
                   />
                </label>
             </div>
+
+            <div className="form-control w-full">
+               <label className="label">
+                  <span className="label-text">About</span>
+               </label>
+               <label className="input-group">
+                  <span>
+                     <FaPen />
+                  </span>
+                  <textarea
+                     type="text"
+                     placeholder={"Write something about yourself"}
+                     defaultValue={user.about || ""}
+                     className="input input-bordered w-full h-48 p-3"
+                     {...register("about", { required: true })}
+                  ></textarea>
+               </label>
+            </div>
+
+            {errors.about && (
+               <span className="text-red-500">
+                  Write something for about section
+               </span>
+            )}
 
             <input
                type="submit"

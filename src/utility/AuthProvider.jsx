@@ -71,6 +71,20 @@ const AuthProvider = ({ children }) => {
          .catch((e) => console.log(e));
    };
 
+   const socialLinksUpdate = (data) => {
+      fetch("https://ashfatul-islam-server.vercel.app/social-links", {
+         method: "PATCH",
+         headers: {
+            "content-type": "application/json",
+         },
+         body: JSON.stringify(data),
+      })
+         .then(() => {
+            toastr.success("Social links Updated Successfully");
+         })
+         .catch((e) => console.log(e));
+   };
+
    useEffect(() => {
       const unsubscribe = onAuthStateChanged(auth, (loggedUser) => {
          setUser(loggedUser);
@@ -89,6 +103,7 @@ const AuthProvider = ({ children }) => {
       logOut,
       profileUpdate,
       profileUpdateFrontEnd,
+      socialLinksUpdate,
    };
 
    return (

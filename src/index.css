@@ -8,7 +8,3 @@
 .active {
    @apply bg-transparent underline underline-offset-4 font-bold text-blue-700;
 }
-
-/* ul li a.active {
-   @apply text-black;
-} */

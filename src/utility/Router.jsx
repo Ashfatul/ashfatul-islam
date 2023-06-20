@@ -13,6 +13,7 @@ import About from "../components/About/About";
 import Skills from "../components/Skills/Skills";
 import UpdateBackEndProfile from "../components/UpdateProfile/UpdateBackEndProfile";
 import UpdateFrontEndProfile from "../components/UpdateProfile/UpdateFrontEndProfile";
+import UpdateSocialLinks from "../components/UpdateProfile/UpdateSocialLinks";
 
 const router = createBrowserRouter([
    {
@@ -55,15 +56,16 @@ const router = createBrowserRouter([
             element: <Dashboard />,
          },
          {
-            path: "/root/update-profile",
-            element: (
-               <>
-                  <div className="flex gap-5">
-                     <UpdateFrontEndProfile />
-                     <UpdateBackEndProfile />
-                  </div>
-               </>
-            ),
+            path: "/root/frontend-profile",
+            element: <UpdateFrontEndProfile />,
+         },
+         {
+            path: "/root/backend-profile",
+            element: <UpdateBackEndProfile />,
+         },
+         {
+            path: "/root/social-links",
+            element: <UpdateSocialLinks />,
          },
          {
             path: "/root/add-project",
