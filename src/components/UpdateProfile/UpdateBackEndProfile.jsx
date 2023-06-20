@@ -18,7 +18,7 @@ export default function UpdateBackEndProfile() {
    };
 
    return (
-      <div className="form-container mt-5">
+      <div className="form-container mt-5 flex-1">
          <form
             onSubmit={handleSubmit(update)}
             className="bg-white rounded-lg p-5 w-full"

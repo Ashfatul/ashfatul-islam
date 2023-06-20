@@ -16,7 +16,7 @@ export default function FrontEndLayout() {
    return (
       <>
          <Helmet>
-            <title>{user.displayName || "SetUser"} | Portfolio</title>
+            <title>{user.displayName || ""} | Portfolio</title>
          </Helmet>
 
          <Header user={user} />

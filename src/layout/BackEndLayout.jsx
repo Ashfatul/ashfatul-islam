@@ -19,7 +19,7 @@ export default function BackEndLayout() {
    return (
       <>
          <Helmet>
-            <title>{user.displayName || "SetUser"} | Portfolio</title>
+            <title>{user.displayName || ""} | Portfolio</title>
          </Helmet>
          <div className="header p-3 flex justify-between items-center bg-slate-600 text-white">
             <Link to="/root" className="text-3xl text-white">

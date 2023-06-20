@@ -58,7 +58,7 @@ const router = createBrowserRouter([
             path: "/root/update-profile",
             element: (
                <>
-                  <div className="flex justify-evenly">
+                  <div className="flex gap-5">
                      <UpdateFrontEndProfile />
                      <UpdateBackEndProfile />
                   </div>

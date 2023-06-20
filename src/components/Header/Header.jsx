@@ -70,7 +70,7 @@ export default function Header({ user }) {
                         to="/"
                         className="text-2xl font-bold uppercase text-blue-500 hover:text-blue-700"
                      >
-                        {user.websiteName || "SetUser"}
+                        {user.websiteName || ""}
                      </Link>
                   </div>
 

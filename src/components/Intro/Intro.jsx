@@ -26,7 +26,7 @@ export default function Intro() {
                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl my-5">
                   I&apos;m{" "}
                   <span className="text-blue-500">
-                     {user.displayName || "SetUser"}
+                     {user.displayName || ""}
                   </span>
                </h1>
                {designationArray.length > 0 && (

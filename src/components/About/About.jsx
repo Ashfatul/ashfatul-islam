@@ -12,7 +12,7 @@ export default function About() {
                   <img
                      src="https://i.ibb.co/cFfJ18s/ashfatul-photo-transparent.png"
                      alt="ashfatul photo"
-                     className="h-[250px] w-[250px] object-cover object-center rounded-lg mx-auto bg-gray-300 -skew-x-3 border-cyan-600 border-8"
+                     className="h-[250px] w-[250px] object-cover object-center rounded-lg mx-auto bg-gray-300 border-cyan-600 border-8"
                   />
                </div>
                <div className="about flex-1 mt-10 sm:mt-0">

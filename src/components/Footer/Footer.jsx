@@ -84,8 +84,8 @@ export default function Footer({ user }) {
             </div>
          </div>
          <div className="copyright text-center text-white py-5 bg-black">
-            Copyright &copy; {user.websiteName || "SetUser"} | All right
-            reserved | <span>{new Date().getFullYear()}</span>
+            Copyright &copy; {user.websiteName || ""} | All right reserved |{" "}
+            <span>{new Date().getFullYear()}</span>
          </div>
       </div>
    );
