@@ -57,6 +57,20 @@ const AuthProvider = ({ children }) => {
       }
    };
 
+   const profileUpdateFrontEnd = (data) => {
+      fetch("https://ashfatul-islam-server.vercel.app/update-user-profile/", {
+         method: "PATCH",
+         headers: {
+            "content-type": "application/json",
+         },
+         body: JSON.stringify(data),
+      })
+         .then(() => {
+            toastr.success("Profile Updated Successfully");
+         })
+         .catch((e) => console.log(e));
+   };
+
    useEffect(() => {
       const unsubscribe = onAuthStateChanged(auth, (loggedUser) => {
          setUser(loggedUser);
@@ -74,6 +88,7 @@ const AuthProvider = ({ children }) => {
       signIn,
       logOut,
       profileUpdate,
+      profileUpdateFrontEnd,
    };
 
    return (

@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import BackEndLayout from "../layout/BackEndLayout";
-import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 import Login from "../components/Login/Login";
 import LoggedInRedirect from "../Redirect/LoggedInRedirect";
 import NotLoggedInRedirect from "../Redirect/NotLoggedInRedirect";
@@ -12,6 +11,8 @@ import ProjectAddUpdateForm from "../components/ProjectAddUpdateForm/ProjectAddU
 import Projects from "../components/Projects/Projects";
 import About from "../components/About/About";
 import Skills from "../components/Skills/Skills";
+import UpdateBackEndProfile from "../components/UpdateProfile/UpdateBackEndProfile";
+import UpdateFrontEndProfile from "../components/UpdateProfile/UpdateFrontEndProfile";
 
 const router = createBrowserRouter([
    {
@@ -55,7 +56,14 @@ const router = createBrowserRouter([
          },
          {
             path: "/root/update-profile",
-            element: <UpdateProfile />,
+            element: (
+               <>
+                  <div className="flex justify-evenly">
+                     <UpdateFrontEndProfile />
+                     <UpdateBackEndProfile />
+                  </div>
+               </>
+            ),
          },
          {
             path: "/root/add-project",

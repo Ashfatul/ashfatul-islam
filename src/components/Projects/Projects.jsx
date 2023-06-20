@@ -31,7 +31,6 @@ export default function Projects() {
                .then((res) => res.json())
                .then((data) => {
                   if (data.length > 0) {
-                     console.log(data);
                      setLoadMore(true);
                   } else {
                      setLoadMore(false);

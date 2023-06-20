@@ -8,7 +8,7 @@ import {
    SiTailwindcss,
 } from "react-icons/si";
 
-export default function Footer() {
+export default function Footer({ user }) {
    return (
       <div className="bg-slate-800 mt-20">
          <div className="container px-3 py-10">
@@ -41,7 +41,9 @@ export default function Footer() {
                   </ul>
                </div>
                <div className="about min-w-[300px] mb-10 text-center flex-1">
-                  <h1 className="text-white text-2xl mb-5">Ashfatul Islam</h1>
+                  <h1 className="text-white text-2xl mb-5">
+                     {user.displayName}
+                  </h1>
                   <p className="text-white text-center">
                      Ashfatul Islam, a MERN Stack developer based in Bangladesh,
                      has created this portfolio website to showcase his skills
@@ -82,8 +84,8 @@ export default function Footer() {
             </div>
          </div>
          <div className="copyright text-center text-white py-5 bg-black">
-            Copyright &copy; Ashfatul | All right reserved |{" "}
-            <span>{new Date().getFullYear()}</span>
+            Copyright &copy; {user.websiteName || "SetUser"} | All right
+            reserved | <span>{new Date().getFullYear()}</span>
          </div>
       </div>
    );

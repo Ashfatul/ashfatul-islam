@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../utility/AuthProvider";
+import { FaUser } from "react-icons/fa";
+import { HiPhotograph } from "react-icons/hi";
 
-export default function UpdateProfile() {
+export default function UpdateBackEndProfile() {
    const { profileUpdate } = useContext(AuthContext);
    const { user } = useContext(AuthContext);
    const {
@@ -16,18 +18,20 @@ export default function UpdateProfile() {
    };
 
    return (
-      <div className="form-container flex justify-center items-center mt-5">
+      <div className="form-container mt-5">
          <form
             onSubmit={handleSubmit(update)}
-            className="bg-white rounded-lg p-5 w-full md:w-4/5"
+            className="bg-white rounded-lg p-5 w-full"
          >
-            <h2 className="text-2xl text-center">Update Your Profile!</h2>
+            <h2 className="text-2xl text-center mb-5">BackEnd Profile!</h2>
             <div className="form-control w-full">
                <label className="label">
                   <span className="label-text">Name</span>
                </label>
                <label className="input-group">
-                  <span>Name</span>
+                  <span>
+                     <FaUser />
+                  </span>
                   <input
                      type="text"
                      placeholder={user?.displayName || "Jhon doe"}
@@ -47,7 +51,9 @@ export default function UpdateProfile() {
                   <span className="label-text">Photo</span>
                </label>
                <label className="input-group">
-                  <span>Photo</span>
+                  <span>
+                     <HiPhotograph />
+                  </span>
                   <input
                      type="text"
                      placeholder={user?.photoURL || "photo.png"}
@@ -63,8 +69,8 @@ export default function UpdateProfile() {
 
             <input
                type="submit"
-               className="btn mt-5 block w-full"
-               value={"Update"}
+               className="btn mt-10 block w-full"
+               value={"Update Backend Profile"}
             />
          </form>
       </div>

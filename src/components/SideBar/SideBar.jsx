@@ -19,7 +19,7 @@ export default function SideBar() {
             </li>
             <li>
                <NavLink to="update-profile" className="flex gap-3" end>
-                  <FaUser /> Backend Profile
+                  <FaUser /> Profile Update
                </NavLink>
             </li>
          </ul>

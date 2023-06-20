@@ -5,9 +5,10 @@ import { useContext } from "react";
 import { AuthContext } from "../utility/AuthProvider";
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
+import { Helmet } from "react-helmet";
 
 export default function BackEndLayout() {
-   const { logOut } = useContext(AuthContext);
+   const { logOut, user } = useContext(AuthContext);
    const handleLogout = () => {
       const confirmLogout = confirm("Are you sure you want to log out?");
       if (confirmLogout) {
@@ -17,6 +18,9 @@ export default function BackEndLayout() {
    };
    return (
       <>
+         <Helmet>
+            <title>{user.displayName || "SetUser"} | Portfolio</title>
+         </Helmet>
          <div className="header p-3 flex justify-between items-center bg-slate-600 text-white">
             <Link to="/root" className="text-3xl text-white">
                Ashfatul

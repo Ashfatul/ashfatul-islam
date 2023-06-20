@@ -4,7 +4,7 @@ import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import { useState } from "react";
 import { useEffect } from "react";
 
-export default function Header() {
+export default function Header({ user }) {
    const [darkTheme, setDarkTheme] = useState(
       localStorage.getItem("darkTheme")
          ? JSON.parse(localStorage.getItem("darkTheme"))
@@ -62,7 +62,7 @@ export default function Header() {
    );
    return (
       <Headroom>
-         <div className="shadow-sm">
+         <div className="shadow-sm dark:bg-slate-800">
             <div className="container">
                <div className="navbar min-h-fit p-0 flex justify-between">
                   <div className="">
@@ -70,7 +70,7 @@ export default function Header() {
                         to="/"
                         className="text-2xl font-bold uppercase text-blue-500 hover:text-blue-700"
                      >
-                        Ashfatul
+                        {user.websiteName || "SetUser"}
                      </Link>
                   </div>
 
