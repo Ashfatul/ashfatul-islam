@@ -34,7 +34,6 @@ export default function Projects() {
                            <th className="hidden md:block bg-slate-800 text-white">
                               Description
                            </th>
-                           <th className="bg-slate-800 text-white">Tags</th>
                            <th className="bg-slate-800 text-white">Actions</th>
                         </tr>
                      </thead>
