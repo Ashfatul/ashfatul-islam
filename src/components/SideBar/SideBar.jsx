@@ -18,6 +18,11 @@ export default function SideBar() {
                </NavLink>
             </li>
             <li>
+               <NavLink to="manage-skills-category" className="flex gap-3" end>
+                  <FaPen /> Skills Category
+               </NavLink>
+            </li>
+            <li>
                <NavLink to="frontend-profile" className="flex gap-3" end>
                   <FaUser /> Frontend Profile
                </NavLink>
