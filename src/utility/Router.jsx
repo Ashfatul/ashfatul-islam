@@ -14,7 +14,8 @@ import Skills from "../components/Skills/Skills";
 import UpdateBackEndProfile from "../components/UpdateProfile/UpdateBackEndProfile";
 import UpdateFrontEndProfile from "../components/UpdateProfile/UpdateFrontEndProfile";
 import UpdateSocialLinks from "../components/UpdateProfile/UpdateSocialLinks";
-import ManageSkills from "../components/ManageSkills/ManageSkillsCategory";
+import ManageSkills from "../components/ManageSkills/ManageSkills";
+import ManageSkillsCategory from "../components/ManageSkills/ManageSkillsCategory";
 
 const router = createBrowserRouter([
    {
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
          },
          {
             path: "/root/manage-skills-category",
+            element: <ManageSkillsCategory />,
+         },
+         {
+            path: "/root/manage-skills",
             element: <ManageSkills />,
          },
          {
