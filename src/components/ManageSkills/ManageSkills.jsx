@@ -199,7 +199,7 @@ export default function ManageSkills() {
 
                   <div className="form-control w-full">
                      <label className="label">
-                        <span className="label-text">Category Name</span>
+                        <span className="label-text">Skill Name</span>
                      </label>
                      <label className="input-group">
                         <span>
@@ -210,12 +210,12 @@ export default function ManageSkills() {
                            placeholder={"React"}
                            defaultValue={""}
                            className="input input-bordered w-full"
-                           {...register("categoryName", { required: true })}
+                           {...register("skillName", { required: true })}
                         />
                      </label>
                   </div>
 
-                  {errors.categoryName && (
+                  {errors.skillName && (
                      <span className="text-red-500">
                         This field is required
                      </span>

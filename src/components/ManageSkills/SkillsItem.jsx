@@ -4,7 +4,7 @@ export default function SkillsItem({ skill, handleDelete }) {
    return (
       <tr>
          <td>{skill.order}</td>
-         <td>{skill.categoryName}</td>
+         <td>{skill.skillName}</td>
          <td>{skill.status}</td>
          <td>
             <button
