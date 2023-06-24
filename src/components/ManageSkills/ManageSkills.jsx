@@ -32,8 +32,6 @@ export default function ManageSkills() {
          });
    };
 
-   fetchSkills();
-
    useEffect(() => {
       fetch("https://ashfatul-islam-server.vercel.app/skills-category")
          .then((res) => res.json())
@@ -43,6 +41,8 @@ export default function ManageSkills() {
          .catch((e) => {
             console.log(e);
          });
+
+      fetchSkills();
    }, []);
 
    const createSkill = async (data) => {
@@ -231,6 +231,7 @@ export default function ManageSkills() {
                         </span>
                         <input
                            type="number"
+                           placeholder="0"
                            className="input input-bordered w-full"
                            {...register("skillParentage", {
                               required: {
@@ -246,6 +247,7 @@ export default function ManageSkills() {
                                  message:
                                     "Value must be smaller then or equal to 100",
                               },
+                              valueAsNumber: true,
                            })}
                         />
                      </label>
