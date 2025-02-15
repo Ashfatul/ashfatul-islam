@@ -58,7 +58,7 @@ const AuthProvider = ({ children }) => {
    };
 
    const profileUpdateFrontEnd = (data) => {
-      fetch("https://ashfatul-islam-server.vercel.app/update-user-profile/", {
+      fetch(`${import.meta.env.VITE_API_SERVER}update-user-profile/`, {
          method: "PATCH",
          headers: {
             "content-type": "application/json",
@@ -72,7 +72,7 @@ const AuthProvider = ({ children }) => {
    };
 
    const socialLinksUpdate = (data) => {
-      fetch("https://ashfatul-islam-server.vercel.app/social-links", {
+      fetch("${import.meta.env.VITE_API_SERVER}social-links", {
          method: "PATCH",
          headers: {
             "content-type": "application/json",

@@ -8,7 +8,7 @@ export default function Skills() {
    const [loading, setLoading] = useState(false);
    useEffect(() => {
       setLoading(true);
-      fetch("https://ashfatul-islam-server.vercel.app/skills-category")
+      fetch(`${import.meta.env.VITE_API_SERVER}skills-category`)
          .then((res) => res.json())
          .then((data) => {
             setCategory(data);

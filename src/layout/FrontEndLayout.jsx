@@ -8,7 +8,7 @@ export default function FrontEndLayout() {
    const [user, setUser] = useState({});
 
    useEffect(() => {
-      fetch("https://ashfatul-islam-server.vercel.app/user/")
+      fetch(`${import.meta.env.VITE_API_SERVER}user/`)
          .then((res) => res.json())
          .then((res) => setUser(res))
          .catch((e) => console.log(e));

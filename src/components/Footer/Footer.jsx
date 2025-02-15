@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 export default function Footer({ user }) {
    const [social, setSocial] = useState({});
    useEffect(() => {
-      fetch("https://ashfatul-islam-server.vercel.app/social-links/")
+      fetch(`${import.meta.env.VITE_API_SERVER}social-links/`)
          .then((res) => res.json())
          .then((data) => setSocial(data))
          .catch((e) => console.log(e));

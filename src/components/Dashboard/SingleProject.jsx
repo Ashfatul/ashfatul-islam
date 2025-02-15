@@ -7,7 +7,7 @@ export default function SingleProject({ project, refetch }) {
    const handleDelete = (id, refetch) => {
       const ask = confirm("Are you sure to delete?");
       if (ask) {
-         fetch(`https://ashfatul-islam-server.vercel.app/project/${id}`, {
+         fetch(`${import.meta.env.VITE_API_SERVER}project/${id}`, {
             method: "DELETE",
          });
          refetch();

@@ -8,14 +8,14 @@ export default function About() {
    const [social, setSocial] = useState({});
 
    useEffect(() => {
-      fetch("https://ashfatul-islam-server.vercel.app/user/")
+      fetch(`${import.meta.env.VITE_API_SERVER}user/`)
          .then((res) => res.json())
          .then((data) => setUser(data))
          .catch((e) => console.log(e));
    }, []);
 
    useEffect(() => {
-      fetch("https://ashfatul-islam-server.vercel.app/social-links/")
+      fetch(`${import.meta.env.VITE_API_SERVER}social-links/`)
          .then((res) => res.json())
          .then((data) => setSocial(data))
          .catch((e) => console.log(e));
