@@ -19,7 +19,7 @@ export default function ManageSkillsCategory() {
    const [loading, setLoading] = useState(true);
 
    const fetchCategory = () => {
-      fetch("https://ashfatul-islam-server.vercel.app/skills-category")
+      fetch(`${import.meta.env.VITE_API_SERVER}skills-category`)
          .then((res) => res.json())
          .then((res) => {
             setCategories(res);
@@ -35,7 +35,7 @@ export default function ManageSkillsCategory() {
 
    const deleteCategory = (id) => {
       fetch(
-         `https://ashfatul-islam-server.vercel.app/skills-category/delete/${id}`,
+         `${import.meta.env.VITE_API_SERVER}skills-category/delete/${id}`,
          {
             method: "DELETE",
          }
@@ -49,7 +49,7 @@ export default function ManageSkillsCategory() {
    };
 
    const updateSkillsCategory = (data) => {
-      fetch("https://ashfatul-islam-server.vercel.app/skills-category", {
+      fetch("${import.meta.env.VITE_API_SERVER}skills-category", {
          method: "POST",
          headers: {
             "content-type": "application/json",

@@ -8,7 +8,7 @@ export default function Projects() {
       queryKey: ["projects"],
       queryFn: async () => {
          const data = await fetch(
-            "https://ashfatul-islam-server.vercel.app/projects"
+            `${import.meta.env.VITE_API_SERVER}projects`
          );
          return data.json();
       },

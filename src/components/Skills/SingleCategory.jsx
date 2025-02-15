@@ -5,7 +5,7 @@ export default function SingleCategory({ data }) {
    const [skills, setSkills] = useState([]);
    useEffect(() => {
       fetch(
-         `https://ashfatul-islam-server.vercel.app/skills/category/${data._id}`
+         `${import.meta.env.VITE_API_SERVER}skills/category/${data._id}`
       )
          .then((res) => res.json())
          .then((data) => setSkills(data))

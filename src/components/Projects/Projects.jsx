@@ -13,7 +13,7 @@ export default function Projects() {
    useEffect(() => {
       setLoading(true);
       fetch(
-         `https://ashfatul-islam-server.vercel.app/projects/?limit=${limit}&skip=${
+         `${import.meta.env.VITE_API_SERVER}projects/?limit=${limit}&skip=${
             skip * limit
          }`
       )
@@ -24,7 +24,7 @@ export default function Projects() {
          })
          .then(
             fetch(
-               `https://ashfatul-islam-server.vercel.app/projects/?limit=${limit}&skip=${
+               `${import.meta.env.VITE_API_SERVER}projects/?limit=${limit}&skip=${
                   (skip + 1) * limit
                }`
             )

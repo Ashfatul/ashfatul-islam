@@ -14,7 +14,7 @@ export default function UpdateSocialLinks() {
    };
 
    useEffect(() => {
-      fetch("https://ashfatul-islam-server.vercel.app/social-links")
+      fetch(`${import.meta.env.VITE_API_SERVER}social-links`)
          .then((res) => res.json())
          .then((data) => setSocialLinks(data))
          .catch((e) => console.log(e));

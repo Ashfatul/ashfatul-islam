@@ -11,7 +11,7 @@ export default function ProjectAddUpdateForm({ isUpdating }) {
    useEffect(() => {
       const fetchProject = async () => {
          await fetch(
-            `https://ashfatul-islam-server.vercel.app/update-project/${id}`
+            `${import.meta.env.VITE_API_SERVER}update-project/${id}`
          )
             .then((res) => res.json())
             .then((data) => setData(data))
@@ -29,7 +29,7 @@ export default function ProjectAddUpdateForm({ isUpdating }) {
    } = useForm();
 
    const addNewProject = (info) => {
-      fetch("https://ashfatul-islam-server.vercel.app/projects", {
+      fetch("${import.meta.env.VITE_API_SERVER}projects", {
          method: "POST",
          headers: {
             "content-type": "application/json",
@@ -44,7 +44,7 @@ export default function ProjectAddUpdateForm({ isUpdating }) {
    };
 
    const handleUpdate = (info) => {
-      fetch(`https://ashfatul-islam-server.vercel.app/update-project/${id}`, {
+      fetch(`${import.meta.env.VITE_API_SERVER}update-project/${id}`, {
          method: "PUT",
          headers: {
             "content-type": "application/json",
